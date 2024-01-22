@@ -27,8 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // つぶやき機能
+    Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
+    Route::get('/posts/create', [PostsController::class, 'create'])->name('posts.create');
+    Route::post('/posts/store', [PostsController::class, 'store'])->name('posts.store');
 });
 
-Route::get('/posts', [PostsController::class, 'index']);
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
