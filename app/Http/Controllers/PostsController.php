@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\PostsService;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePostRequest;
 use Illuminate\Support\Facades\DB;
 use Exception;
 
@@ -29,7 +30,7 @@ class PostsController extends Controller
     }
 
     // 新規つぶやきを投稿する
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
         // TODO: バリデーションルール作成
         DB::beginTransaction();
