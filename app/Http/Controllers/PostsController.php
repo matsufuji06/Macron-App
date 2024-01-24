@@ -32,7 +32,6 @@ class PostsController extends Controller
     // 新規つぶやきを投稿する
     public function store(StorePostRequest $request)
     {
-        // TODO: バリデーションルール作成
         DB::beginTransaction();
         try {
             $this->postsService->storePost($request);
