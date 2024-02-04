@@ -1,10 +1,9 @@
-<!-- TODO: bootstrapの導入・基本UIのデザイン -->
+<!-- TODO: 基本UIのデザイン -->
 
 <head>
     <meta charset="UTF-8">
     <title></title>
-    @vite('resources/css/app.css')
-    <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css"> -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <!-- フラッシュメッセージ -->
